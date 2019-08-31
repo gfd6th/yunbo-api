@@ -1,0 +1,12 @@
+{
+  "plans": {
+    "yearly": {
+      "name": "年费",
+      "price": 100
+    },
+    "lifetime":{
+      "name": "终身",
+      "price": 200000
+    }
+  }
+}
