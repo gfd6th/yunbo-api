@@ -49,7 +49,7 @@ class SocialiteController extends Controller
         try {
             $serviceUser = Socialite::driver('wechat')->user();
         } catch (\Exception $e) {
-            return redirect(config('app.client_base_url') . "/auth/social-callback/index.html?error=1&redirect={$redirect}");
+            return redirect(config('app.client_base_url') . "/auth/social-callback?error=1&redirect={$redirect}");
         }
 
         $localUser = $this->getExistingUser($serviceUser);
@@ -57,12 +57,12 @@ class SocialiteController extends Controller
         if(!$localUser){
             \Cache::put($serviceUser->id, $serviceUser, now()->addHour());
             $avatar = urlencode($serviceUser->avatar);
-            return redirect(config('app.client_base_url') . "/auth/social-callback/index.html?openid={$serviceUser->id}&redirect={$redirect}&avatar={$avatar}");
+            return redirect(config('app.client_base_url') . "/auth/social-callback?openid={$serviceUser->id}&redirect={$redirect}&avatar={$avatar}");
         }
 
         $accessToken =  $localUser->createToken(config('app.token_name'))->accessToken;
 
-        return redirect(config('app.client_base_url') . "/auth/social-callback/index.html?redirect={$redirect}&access_token=${accessToken}");
+        return redirect(config('app.client_base_url') . "/auth/social-callback?redirect={$redirect}&access_token=${accessToken}");
 //        return redirect(config('app.client_base_url') . "/auth/social-callback?token{$token}=&redirect={$redirect}");
     }
 

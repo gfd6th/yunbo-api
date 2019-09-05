@@ -85,27 +85,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="108" column="34" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
-              <folding>
-                <element signature="e#23#48#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Resources/UserResource.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Feature/UserTest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
@@ -120,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
+            <state relative-caret-position="525">
               <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
@@ -129,10 +108,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="64" column="89" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
-              <caret line="59" column="93" selection-start-line="59" selection-start-column="93" selection-end-line="59" selection-end-column="93" />
-              <caret line="51" column="93" selection-start-line="51" selection-start-column="93" selection-end-line="51" selection-end-column="93" />
+            <state relative-caret-position="356">
+              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+              <folding>
+                <element signature="e#40#54#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
@@ -449,32 +438,6 @@
               <item name="auth" type="b2602c69:ProjectViewProjectNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="auth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="auth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel-admin-ext" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="auth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel-admin-ext" type="462c0819:PsiDirectoryNode" />
-              <item name="grid-sortable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="auth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel-admin-ext" type="462c0819:PsiDirectoryNode" />
-              <item name="grid-sortable" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -596,7 +559,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265250000" />
+    <option name="totallyTimeSpent" value="265275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -716,13 +679,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Forms/AdminForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Forms/AdminForm.php" />
     <entry file="file://$PROJECT_DIR$/app/Listeners/AddAffiliationToGroupOwner.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -745,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        <state relative-caret-position="426">
+          <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
@@ -787,12 +744,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Socialite/SocialiteInterface.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Socialite/Weixin.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Socialite/SocialiteInterface.php" />
+    <entry file="file://$PROJECT_DIR$/app/Socialite/Weixin.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CourseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -897,9 +850,7 @@
         <state relative-caret-position="-124" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/null">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/null" />
     <entry file="file://$PROJECT_DIR$/tests/CreatesApplication.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -995,17 +946,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
+        <state relative-caret-position="525">
           <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="64" column="89" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
-          <caret line="59" column="93" selection-start-line="59" selection-start-column="93" selection-end-line="59" selection-end-column="93" />
-          <caret line="51" column="93" selection-start-line="51" selection-start-column="93" selection-end-line="51" selection-end-column="93" />
+        <state relative-caret-position="356">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
