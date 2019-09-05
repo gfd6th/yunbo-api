@@ -67,7 +67,7 @@ class OrderController extends Controller
             // 你的逻辑
             if ($message['return_code'] === 'SUCCESS') { // return_code 表示通信状态，不代表支付状态
                 // 用户是否支付成功
-                if ($message['resultc_code'] === 'SUCCESS' && $order = Order::where('order_id',$message['out_trade_no'] )->where('is_paid', false)->firstOrFail()) {
+                if ($message['result_code'] === 'SUCCESS' && $order = Order::where('order_id',$message['out_trade_no'] )->where('is_paid', false)->firstOrFail()) {
                     $order->user->paidForPlan($message['total_fee']);
                     $order->is_paid = true;
                     $order->save();

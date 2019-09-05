@@ -4,6 +4,7 @@ namespace App\Admin\Forms;
 
 use Encore\Admin\Widgets\Form;
 use Illuminate\Http\Request;
+use Setting as SiteSetting;
 
 class Setting extends Form
 {
@@ -12,7 +13,7 @@ class Setting extends Form
      *
      * @var string
      */
-    public $title = '网站设置';
+    public $title = '设置';
 
     /**
      * Handle the form request.
@@ -23,11 +24,24 @@ class Setting extends Form
      */
     public function handle(Request $request)
     {
-        //dump($request->all());
+        try {
+            $yearly = $request->get('yearly');
+            $lifetime = $request->get('lifetime');
+            setting([
+               'plans.yearly.price' =>  $yearly * 100,
+               'plans.lifetime.price' =>  $lifetime * 100,
+                'admins' => $request->admins
+            ])->save();
+            admin_success('修改成功');
+        } catch (\Exception $e) {
+            admin_success('数据处理成功失败.');
 
-        admin_success('Processed successfully.');
+        } finally {
+            return back();
 
-        return back();
+        }
+
+
     }
 
     /**
@@ -35,9 +49,12 @@ class Setting extends Form
      */
     public function form()
     {
-        $this->text('name')->rules('required');
-        $this->email('email')->rules('email');
-        $this->datetime('created_at');
+        $this->text('yearly', '年费会员价格(元)')->rules('required');
+        $this->text('lifetime', '终身会员价格(元)')->rules('required');
+        $this->text('admins', '管理员openid(已"|"分隔)')->rules('required');
+
+//        $this->email('email')->rules('email');
+//        $this->datetime('created_at');
     }
 
     /**
@@ -48,9 +65,9 @@ class Setting extends Form
     public function data()
     {
         return [
-            'name'       => 'John Doe',
-            'email'      => 'John.Doe@gmail.com',
-            'created_at' => now(),
+            'yearly'   => SiteSetting::get('plans.yearly.price') / 100,
+            'lifetime' => SiteSetting::get('plans.lifetime.price') / 100,
+            'admins' => SiteSetting::get('admins')
         ];
     }
 }

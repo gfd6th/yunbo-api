@@ -52,6 +52,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nunomaduro/collision" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/flysystem-qiniu" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/laravel-filesystem-qiniu" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/laravel-socialite" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/laravel-wechat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/socialite" />
@@ -79,6 +81,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/qiniu/php-sdk" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />

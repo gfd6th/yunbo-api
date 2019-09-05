@@ -47,14 +47,17 @@ class User extends Authenticatable
 
     public function paidForPlan($plan_price)
     {
+        $plan = '';
         if ($plan_price == Setting::get('plans.yearly.price')) {
             $this->expire_at = now()->addYear();
+            $plan='年费会员';
         }
         if ($plan_price == Setting::get('plans.lifetime.price')) {
             $this->lifetime = true;
+            $plan="终身会员";
         }
         $this->save();
-        event(new OrderPaid($plan_price, $this));
+        event(new OrderPaid($plan_price, $this, $plan));
     }
 
     public function orders()
@@ -104,5 +107,12 @@ class User extends Authenticatable
     protected function yearly(): bool
     {
         return $this->expire_at > now();
+    }
+
+    public function getIsSubscribeAttribute()
+    {
+        $openid = $this->socialFor('wechat')->provider_id;
+        $app= app('wechat.official_account');
+        return (bool) $app->user->get($openid)['subscribe'];
     }
 }

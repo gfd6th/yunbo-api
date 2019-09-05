@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Forms\Setting;
 use App\Course;
 use App\Group;
 use App\Http\Controllers\Controller;
@@ -20,8 +21,13 @@ class SettingController extends Controller
     {
 
         return $content
-            ->title('概况');
-         }
+            ->title('网站设置')
+            ->body(new Setting());
+    }
 
-
+    public function clearCache()
+    {
+        \Cache::flush();
+        return response()->json('ok', 200);
+    }
 }

@@ -21,7 +21,7 @@ class UserResource extends JsonResource
             'expire_at' => $this->expire_at,
             'lifetime'  => $this->lifetime,
             'isPremium' => $this->isPremium(),
-
+            'isSubscribe' => $this->isSubscribe
         ];
     }
 }

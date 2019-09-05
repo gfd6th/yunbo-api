@@ -18,4 +18,5 @@ Route::group([
     $router->resource('courses', CourseController::class);
     $router->resource('lessons', LessonController::class);
     $router->resource('orders', OrderController::class);
+    $router->get('clear', 'SettingController@clearCache');
 });

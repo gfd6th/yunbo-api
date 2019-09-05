@@ -29,5 +29,14 @@ class Group extends Model
             ->groupBy('paid')->map->count();
     }
 
+    public function getProfitAttribute($profit)
+    {
+        return $profit / 100;
+    }
+
+    public function setProfitAttribute($profit)
+    {
+        return $this->attributes['profit'] = $profit * 100;
+    }
 
 }

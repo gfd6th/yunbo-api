@@ -128,6 +128,9 @@
       <path value="$PROJECT_DIR$/vendor/laravel-admin-ext/grid-sortable" />
       <path value="$PROJECT_DIR$/vendor/spatie/eloquent-sortable" />
       <path value="$PROJECT_DIR$/vendor/staudenmeir/belongs-to-through" />
+      <path value="$PROJECT_DIR$/vendor/qiniu/php-sdk" />
+      <path value="$PROJECT_DIR$/vendor/overtrue/laravel-filesystem-qiniu" />
+      <path value="$PROJECT_DIR$/vendor/overtrue/flysystem-qiniu" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

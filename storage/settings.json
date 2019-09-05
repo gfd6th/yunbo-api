@@ -1,12 +1,1 @@
-{
-  "plans": {
-    "yearly": {
-      "name": "年费",
-      "price": 100
-    },
-    "lifetime":{
-      "name": "终身",
-      "price": 200000
-    }
-  }
-}
+{"plans":{"yearly":{"name":"\u5e74\u8d39","price":100},"lifetime":{"name":"\u7ec8\u8eab","price":200000}},"admins":"oU_qJv6AaWA1Xryaj79WIlkLeba8"}

@@ -5,42 +5,13 @@ namespace Tests\Feature;
 use App\Group;
 use App\User;
 use App\UserSocial;
-use Closure;
 use Laravel\Passport\ClientRepository;
+use Tests\FakerWechatProvider;
 use Tests\TestCase;
 use Overtrue\Socialite\User as SocialiteUser;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Socialite;
 use Cache;
-
-class FakeWechatProvider
-{
-    private $code;
-
-    public function __construct($code)
-    {
-        $this->code = $code;
-    }
-
-    public function user()
-    {
-        if ($this->code !== 'token') {
-            throw new \Exception('error token');
-        }
-        $user = new SocialiteUser([
-            'id'       => 'openid',
-            'name'     => 'name',
-            'nickname' => 'nickname',
-            'avatar'   => 'avatar',
-            'email'    => null,
-            'original' => [],
-            'provider' => 'WeChat',
-        ]);
-
-        return $user;
-    }
-}
 
 class SocialiteTest extends TestCase
 {
@@ -51,7 +22,7 @@ class SocialiteTest extends TestCase
     {
         $code = 'disagree';
         $redirect = '/path/to/client/callback';
-        $wechatProvider = new FakeWechatProvider($code);
+        $wechatProvider = new FakerWechatProvider($code);
         Socialite::shouldReceive('driver')->andReturn($wechatProvider);
         $this->get("/api/auth/login/wechat/callback?code={$code}&state={$redirect}")
             ->assertRedirect(config('app.client_base_url') . "/auth/social-callback?error=1&redirect={$redirect}");
@@ -62,13 +33,12 @@ class SocialiteTest extends TestCase
     {
         $code = 'token';
         $redirect = '/path/to/client/callback';
-        $wechatProvider = new FakeWechatProvider($code);
+        $wechatProvider = new FakerWechatProvider($code);
         Socialite::shouldReceive('driver')->andReturn($wechatProvider);
         $this->get("/api/auth/login/wechat/callback?code={$code}&state={$redirect}")
             ->assertRedirect(config('app.client_base_url') . "/auth/social-callback?openid=openid&redirect={$redirect}&avatar=avatar");
         $this->assertEquals('openid', Cache::get('openid')['id']);
     }
-
 
 
     /** @test */
@@ -133,7 +103,7 @@ class SocialiteTest extends TestCase
         );
         $code = 'token';
         $redirect = '/path/to/client/callback';
-        $wechatProvider = new FakeWechatProvider($code);
+        $wechatProvider = new FakerWechatProvider($code);
         Socialite::shouldReceive('driver')->andReturn($wechatProvider);
         $response = $this->get("/api/auth/login/wechat/callback?code={$code}&state={$redirect}")
             ->getContent();

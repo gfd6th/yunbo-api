@@ -14,9 +14,14 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return CourseResource::collection(Course::withCount('lessons')->paginate(10));
+        $page = $request->has('page') ? $request->query('page') : 1;
+        return \Cache::remember('courses_' . $page, 60*60, function(){
+            return CourseResource::collection(Course::withCount('lessons')->paginate(10));
+        });
+
+
     }
 
 
@@ -28,8 +33,13 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        return new CourseResource($course->load('lessons'));
+        return
+            \Cache::remember('courseDetail', 60*60, function() use ($course){
+                return new CourseResource($course->load('lessons'));
+            });
+
     }
+
 
 
 

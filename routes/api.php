@@ -25,5 +25,6 @@ Route::middleware('auth:api')->get('me', 'UserController@me');
 Route::middleware('auth:api')->get('more-info', 'UserController@moreInfo');
 Route::resource('courses', 'CourseController');
 Route::middleware('auth:api')->get('groups', 'GroupController@show');
-
+Route::get('settings', 'SettingController@index');
 Route::post('wxjssdk', 'WechatController@wxjssdk');
+Route::get('send', 'WechatController@send');

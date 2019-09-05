@@ -15,16 +15,18 @@ class OrderPaid
     use Dispatchable, SerializesModels;
     public $price;
     public $user;
+    public $plan;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($price, $user)
+    public function __construct($price, $user, $plan=null)
     {
         $this->price = $price;
         $this->user = $user;
+        $this->plan = $plan;
     }
 
     

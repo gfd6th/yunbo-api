@@ -97,9 +97,9 @@ class GroupController extends AdminController
         $form->text('code', __('口令'))->required()->setWidth(2);
         $form->rate('affiliate', __('提成比例(%)'))->default(2)->setWidth(2);
         $form->currency('profit', __('待支付(元)'))->default(0)->setWidth(2);
-        $form->saved(function ($form) {
-            $form->model()->owner->update(['group_id' => null]);
-        });
+//        $form->saved(function ($form) {
+//            $form->model()->owner->update(['group_id' => null]);
+//        });
         return $form;
     }
 }

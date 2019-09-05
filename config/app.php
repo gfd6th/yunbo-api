@@ -170,6 +170,8 @@ return [
 //        \SocialiteProviders\Manager\ServiceProvider::class,
 
         Overtrue\LaravelSocialite\ServiceProvider::class,
+        Overtrue\LaravelFilesystem\Qiniu\QiniuStorageServiceProvider::class,
+
 //        Spatie\Permission\PermissionServiceProvider::class,
 
         /*

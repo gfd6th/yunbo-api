@@ -27,7 +27,7 @@ class AddAffiliationToGroupOwner
     public function handle(OrderPaid $event)
     {
         $group = $event->user->group;
-        $affiliate =   $event->price * ($group->affiliate/100);
+        $affiliate =   $event->price/100 * ($group->affiliate/100);
         $group->profit += $affiliate;
         $group->save();
     }

@@ -15,7 +15,7 @@ class OrderController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Order';
+    protected $title = '订单管理';
 
     /**
      * Make a grid builder.
@@ -25,6 +25,18 @@ class OrderController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Order);
+        $grid->filter(function ($filter) {
+
+            $filter->disableIdFilter();
+            // 设置created_at字段的范围查询
+            $filter->equal('is_paid', '支付状态')->radio([
+                '' => '全部',
+                0  => '未支付',
+                1  => '已支付',
+            ]);
+        });
+        $grid->disableExport();
+        $grid->disableCreateButton();
         $grid->column('id', __('Id'));
         $grid->column('order_id', __('订单编号'));
         $grid->column('user.name', __('用户'));
