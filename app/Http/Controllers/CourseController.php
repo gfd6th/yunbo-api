@@ -34,7 +34,7 @@ class CourseController extends Controller
     public function show(Course $course)
     {
         return
-            \Cache::remember('courseDetail', 60*60, function() use ($course){
+            \Cache::remember('courseDetail_' . $course->id, 60*60, function() use ($course){
                 return new CourseResource($course->load('lessons'));
             });
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ddbe097-a6b1-4ba4-a51b-74d6dc4df785" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +27,7 @@
           <entry key="env" value="584" />
           <entry key="js" value="8" />
           <entry key="json" value="134" />
-          <entry key="php" value="39338" />
+          <entry key="php" value="39353" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
@@ -37,7 +37,7 @@
           <entry key="Blade" value="856" />
           <entry key="JSON" value="134" />
           <entry key="JavaScript" value="8" />
-          <entry key="PHP" value="38482" />
+          <entry key="PHP" value="38497" />
           <entry key="PLAIN_TEXT" value="31" />
           <entry key="XML" value="10" />
         </counts>
@@ -51,7 +51,7 @@
           <entry key="json" value="16" />
           <entry key="log" value="2" />
           <entry key="null" value="1" />
-          <entry key="php" value="455" />
+          <entry key="php" value="456" />
           <entry key="png" value="2" />
           <entry key="scss" value="1" />
           <entry key="txt" value="1" />
@@ -67,7 +67,7 @@
           <entry key="JSON" value="16" />
           <entry key="JavaScript" value="3" />
           <entry key="Log" value="2" />
-          <entry key="PHP" value="443" />
+          <entry key="PHP" value="444" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="1" />
           <entry key="Scratch" value="1" />
@@ -99,17 +99,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="272">
+              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CourseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+            <state relative-caret-position="287">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
@@ -250,7 +259,6 @@
         <option value="$PROJECT_DIR$/app/Listeners/AddAffiliationToGroupOwner.php" />
         <option value="$PROJECT_DIR$/app/Admin/Forms/Setting.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/GroupController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" />
         <option value="$PROJECT_DIR$/app/Group.php" />
         <option value="$PROJECT_DIR$/app/Order.php" />
         <option value="$PROJECT_DIR$/app/Listeners/SendWechatNotification.php" />
@@ -267,6 +275,7 @@
         <option value="$PROJECT_DIR$/tests/Unit/OrderTest.php" />
         <option value="$PROJECT_DIR$/tests/Feature/UserTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SocialiteController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" />
       </list>
     </option>
   </component>
@@ -559,7 +568,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265275000" />
+    <option name="totallyTimeSpent" value="266421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -746,13 +755,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Socialite/SocialiteInterface.php" />
     <entry file="file://$PROJECT_DIR$/app/Socialite/Weixin.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CourseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Listeners/SaveOrder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -944,20 +946,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+        <state relative-caret-position="287">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CourseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
         </state>
       </provider>
     </entry>
