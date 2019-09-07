@@ -24,7 +24,7 @@ class HomeController extends Controller
 //
         $data = $groups->pluck('paid_stat', 'name')->transform(function ($i, $key) {
             $j = [];
-            $j['name'] = $key;
+            $j['name'] = (string) $key;
             $j['普通用户'] = 0;
             $j['年费用户'] = 0;
             $j['终身用户'] = 0;

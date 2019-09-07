@@ -39,4 +39,5 @@ class Group extends Model
         return $this->attributes['profit'] = $profit * 100;
     }
 
+
 }

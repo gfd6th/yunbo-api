@@ -94,8 +94,8 @@ class GroupController extends AdminController
         $users = User::all(['id', 'name'])->pluck('name', 'id')->toArray();
         $form->text('name', __('群名'))->required();
         $form->select('owner_id', __('群主'))->setWidth(2)->required()->options($users)->required();
-        $form->text('code', __('口令'))->required()->setWidth(2);
-        $form->rate('affiliate', __('提成比例(%)'))->default(2)->setWidth(2);
+        $form->text('code', __('口令'))->rules('required|unique:groups,code')->setWidth(2);
+        $form->rate('affiliate', __('提成比例(%)'))->default(50)->setWidth(2);
         $form->currency('profit', __('待支付(元)'))->default(0)->setWidth(2);
 //        $form->saved(function ($form) {
 //            $form->model()->owner->update(['group_id' => null]);

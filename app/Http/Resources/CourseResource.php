@@ -19,7 +19,7 @@ class CourseResource extends JsonResource
             'title'       => $this->title,
             'lessonCount' => $this->lessons_count ?? $this->whenLoaded('lessons')->count(),
             'lessons'     => LessonResource::collection($this->whenLoaded('lessons')),
-            'img'         => $this->img,
+            'img'         => \Storage::disk('qiniu')->url($this->img),
             'intro'       => $this->intro,
             'free'        => $this->free,
             'level'       => $this->level,

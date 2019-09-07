@@ -5,6 +5,7 @@
 <script>
   var data = {!! $data !!}
 
+    console.log(data)
   var ds = new DataSet();
   var dv = ds.createView().source(data);
   dv.transform({
@@ -12,8 +13,10 @@
     fields: ['普通用户', '年费用户', '终身用户'], // 展开字段集
     key: '用户类型', // key字段
     value: '数量', // value字段
+
     // retains: ['name'] // 保留字段集，默认为除fields以外的所有字段
   });
+
   // 数据被加工成 {State: 'WY', 年龄段: '小于5岁', 数量: 25635}
   var chart = new G2.Chart({
     container: 'mountNode',
@@ -29,6 +32,6 @@
       offset: 12
     }
   });
-  chart.intervalStack().position('name*数量').color('用户类型');
+  chart.intervalStack().position('name*数量').color('用户类型').adjust('stack');
   chart.render();
 </script>
