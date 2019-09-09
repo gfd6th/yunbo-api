@@ -52,7 +52,7 @@ class OrderController extends Controller
             Order::create([
                 'user_id' => auth()->id(),
                 'plan' => $plan['name'],
-                'price' => $plan['price'],
+                'price' => $plan['price']/100,
                 'order_id' => $trade_no
             ]);
             return $jssdk->bridgeConfig($response['prepay_id']);
