@@ -20,13 +20,5 @@ class Order extends Model
         return $this->belongsToThrough(Group::class, User::class);
     }
 
-    public function getPriceAttribute($price)
-    {
-        return $price / 100;
-    }
 
-    public function setPriceAttribute($price)
-    {
-        return $this->attributes['price'] = $price * 100;
-    }
 }

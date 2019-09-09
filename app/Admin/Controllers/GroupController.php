@@ -8,6 +8,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Validation\Rule;
 
 class GroupController extends AdminController
 {
@@ -80,12 +81,19 @@ class GroupController extends AdminController
         return $show;
     }
 
+
+    // 覆盖父对象的update方法
+    public function update($id)
+    {
+        return $this->form($id)->update($id);
+    }
+
     /**
      * Make a form builder.
      *
-     * @return Form
+     * @return Formid
      */
-    protected function form()
+    protected function form($id = null)
     {
         $form = new Form(new Group);
         $form->tools(function ($tools) {
@@ -94,7 +102,11 @@ class GroupController extends AdminController
         $users = User::all(['id', 'name'])->pluck('name', 'id')->toArray();
         $form->text('name', __('群名'))->required();
         $form->select('owner_id', __('群主'))->setWidth(2)->required()->options($users)->required();
-        $form->text('code', __('口令'))->rules('required|unique:groups,code')->setWidth(2);
+        $form->text('code', __('口令'))->rules([
+            'required',
+//            'unique:groups,code,' . $form->model()->id . ',id',
+            Rule::unique('groups')->ignore($id),
+        ])->setWidth(2);
         $form->rate('affiliate', __('提成比例(%)'))->default(50)->setWidth(2);
         $form->currency('profit', __('待支付(元)'))->default(0)->setWidth(2);
 //        $form->saved(function ($form) {

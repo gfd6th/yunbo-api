@@ -29,7 +29,7 @@ class SaveOrder
     public function handle(OrderPaid $event)
     {
         $order = new Order();
-        $order->price = $event->price;
+        $order->price = $event->price / 100;
         if ($event->price === Setting::get('plans.lifetime.price')) {
             $order->plan = '终身会员';
         } else {
