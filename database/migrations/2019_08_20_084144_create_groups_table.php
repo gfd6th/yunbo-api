@@ -17,7 +17,7 @@ class CreateGroupsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->unsignedBigInteger('owner_id');
-            $table->string('code');
+            $table->string('code')->unique();
             $table->unsignedInteger('affiliate')->default(50);
             $table->unsignedBigInteger('profit')->default(0);
             $table->timestamps();

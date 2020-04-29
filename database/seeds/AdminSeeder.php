@@ -19,5 +19,24 @@ class AdminSeeder extends Seeder
             'icon' => 'fa-user',
             'uri' => '/users'
         ]);
+
+        \DB::table('admin_menu')->insert([
+            'parent_id' => 0,
+            'order' => 0,
+            'title' => '群管理',
+            'icon' => 'fa-users',
+            'uri' => '/groups'
+        ]);
+
+        \DB::table('admin_menu')->insert([
+            'parent_id' => 0,
+            'order' => 0,
+            'title' => '课程管理',
+            'icon' => 'fa-book',
+            'uri' => '/courses'
+        ]);
+
+
+
     }
 }

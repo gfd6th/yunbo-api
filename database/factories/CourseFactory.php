@@ -11,7 +11,7 @@ $factory->define(Course::class, function (Faker $faker) {
         'free' => $faker->boolean,
         'level' => $faker->randomElement(['初级', '中级', '高级']),
         'intro' => $faker->sentence,
-        'img' => $faker->imageUrl(200,200),
+        'img' => 'http://placehold.it/200x200'
 
     ];
 });

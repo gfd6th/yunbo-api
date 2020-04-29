@@ -9,7 +9,7 @@ class CourseResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function toArray($request)
@@ -19,7 +19,7 @@ class CourseResource extends JsonResource
             'title'       => $this->title,
             'lessonCount' => $this->lessons_count ?? $this->whenLoaded('lessons')->count(),
             'lessons'     => LessonResource::collection($this->whenLoaded('lessons')),
-            'img'         => \Storage::disk('qiniu')->url($this->img),
+            'img'         => \App::environment('local') ? $this->img : \Storage::disk('qiniu')->url($this->img),
             'intro'       => $this->intro,
             'free'        => $this->free,
             'level'       => $this->level,
