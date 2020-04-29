@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ddbe097-a6b1-4ba4-a51b-74d6dc4df785" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/auth.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CourseResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CourseResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CourseFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CourseFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/LessonFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/LessonFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_20_084144_create_groups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_20_084144_create_groups_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_07_153237_change_group_code_unique.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +236,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566015173462</updated>
       <workItem from="1566015176080" duration="265250000" />
-      <workItem from="1588078051292" duration="7090000" />
+      <workItem from="1588078051292" duration="11039000" />
     </task>
     <servers />
   </component>
@@ -284,13 +276,17 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="584" height="445" key="SwitcherDM" timestamp="1588087921321">
+    <state width="584" height="445" key="SwitcherDM" timestamp="1588147986376">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="584" height="445" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1588087921321" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1588083036561">
+    <state width="584" height="445" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1588147986376" />
+    <state x="421" y="202" width="598" height="518" key="find.popup" timestamp="1588143904648">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1588083036561" />
+    <state x="421" y="202" width="598" height="518" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1588143904648" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1588145032788">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1588145032788" />
   </component>
 </project>

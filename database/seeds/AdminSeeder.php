@@ -36,6 +36,20 @@ class AdminSeeder extends Seeder
             'uri' => '/courses'
         ]);
 
+        \DB::table('admin_menu')->insert([
+            'parent_id' => 0,
+            'order' => 0,
+            'title' => '订单管理',
+            'icon' => 'fa-money',
+            'uri' => '/orders'
+        ]);
+        \DB::table('admin_menu')->insert([
+            'parent_id' => 0,
+            'order' => 0,
+            'title' => '设置',
+            'icon' => 'fa-gear',
+            'uri' => '/settings'
+        ]);
 
 
     }
